@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>Join</title>
+	<style type="text/css">
+	<!--
+		.button {
+    background-color: #2B2B48;border: none;color: white;padding: 15px 32px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;}
+		input[type=text], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=number]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=date]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=text]:focus {border: 2px solid #555;}
+		input[type=submit] {width: 40%; background-color:#2B2B48 ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=submit]:hover { background-color: #4343C1;}
+		input[type=password], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=password]:focus {border: 2px solid #555;}
+	-->
+	</style>
+</head>
+<body>
+	<div class="row" style="background-color:#2B2B48;font-family:Comic Sans MS; font-size:30px; color:white;">
+		<center>Join</center>
+	</div>
+	<form action="IHG.html">
+	<div class="row" style="margin:10px 0px 0px 0px">
+		<div class="column" style="margin:0px 0px 0px 0px">
+					<img src="RC.jpg" alt="Text Image" height="370" width="390" align="right">
+		</div>
+		<div class="column" style="margin:0px 0px 0px 0px">
+					<img src="IHG1.jpg" alt="Text Image" height="250" width="390" align="LEFT">
+		</div>
+		<div class="column" style="margin:0px 400px 0px 400px">
+		<label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fname" placeholder="Full Name">
+		<label for="email">Email Id</label>
+    <input type="text" id="email" name="email" placeholder="Email Id">
+		<label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" placeholder="Password">
+		<label for="cpass">Confirm Password</label>
+    <input type="password" id="cpass" name="cpass" placeholder="Confirm Password">
+		<label for="itypes">Identification Types</label>
+	<select id="itypes" name="itypes">
+		<option value="Identification Types" SELECTED DISABLED>Identification Types</option>
+		<option value="adh">Adhaar Card</option>
+		<option value="pan">PAN Card</option>
+		<option value="dl">Driving Lisence</option>
+		<option value="pass">Passport</option>
+		<option value="vot">Voter ID Card</option>
+    </select>
+		<label for="in">Identification Number</label>
+    <input type="text" id="in" name="in" placeholder="Identification Number">
+		<label for="mob">Mobile No.</label>
+    <input type="text" id="mob" name="mob" placeholder="Mobile Number">
+		<center><input type="submit" value="Join"></center>
+	</div>
+	</form>
+	</div>
+	<div class="row" align ="right">
+		<a class="button" href="Home Page.html"><span>HOME</span></a>
+	</div>
+</body>
+</html>
