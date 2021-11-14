@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title>Form Validation</title>
+	<?php
+		$fnameErr = $panErr = $tanErr = $ayErr = $fyErr= $pmErr= $cmErr= $bankErr= $cddErr= $checkErr= $addrErr= "";
+		$fname = $pan = $tan = $ay = $fy = $pm = $cm = $bank = $cdd = $check = $addr "";
+
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST["fname"])) {
+		$fnameErr = "Name is required";
+	} else {
+    $fname = test_input($_POST["fname"]);
+	}
+  
+	if (empty($_POST["pan"])) {
+    $panErr = "PAN is required";
+	} else {
+    $pan = test_input($_POST["pan"]);
+	}
+  
+	if (empty($_POST["tan"])) {
+    $tanErr = "TAN is required";
+	} else {
+    $tan = test_input($_POST["tan"]);
+	}
+  
+	if (empty($_POST["ay"])) {
+    $ayErr = "Assessment Year is required";
+	} else {
+    $ay = test_input($_POST["ay"]);
+	}
+  
+	if (empty($_POST["fy"])) {
+    $fyErr = "Final Year is required";
+	} else {
+    $fy = test_input($_POST["fy"]);
+	}
+  
+	if (empty($_POST["pm"])) {
+    $pmErr = "Payment Method is required";
+	} else {
+    $pm = test_input($_POST["pm"]);
+	}
+  
+	if (empty($_POST["cm"])) {
+    $cmErr = "Confirmation is required";
+	} else {
+    $cm = test_input($_POST["cm"]);
+	}
+  
+	if (empty($_POST["bank"])) {
+    $bankErr = "bank is required";
+	} else {
+    $bank = test_input($_POST["bank"]);
+	}
+    
+	if (empty($_POST["cdd"])) {
+    $cddErr = "Cheque/DD Number is required";
+	} else {
+    $cdd = test_input($_POST["cdd"]);
+	}
+
+	if (empty($_POST["check"])) {
+    $checkErr = "Check to confirm";
+	} else {
+    $check = test_input($_POST["check"]);
+	}
+
+	if (empty($_POST["addr"])) {
+    $addrErr = "Address is required";
+	} else {
+    $addr = test_input($_POST["addr"]);
+	}
+	}
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
+?>
+</head>
+</html>

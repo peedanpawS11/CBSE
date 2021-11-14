@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	<!--
+		.button {
+    background-color: #E20902  ;border: none;color: white;padding: 15px 32px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;}
+		input[type=text], select, textarea {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=number]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=date]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=text], select, textarea:focus {border: 2px solid #555;}
+		input[type=submit] {width: 40%; background-color:#E20902   ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=submit]:hover { background-color: #F92821;}
+		input[type=password], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=password]:focus {border: 2px solid #555;}
+		input[type=reset] {width: 40%; background-color:#E20902   ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=reset]:hover { background-color: #F92821;}
+	-->
+	</style>
+</head>
+<body>
+	<form>
+		<div class="row" style="background-color:#E20902  ;font-family:Comic Sans MS; font-size:30px; color:white; padding:0">
+		<center><h1>Tax Deduction and Collection Account Number(TAN)</h1></center>
+	</div>
+	<div class="row" style="margin:10px 0px 0px 0px">
+		
+		<table align="left" width="500px" style="margin:0px 0px 0px 100px">
+		<tr><td><label for="fname">Full Name</label></td></tr>
+		<tr><td><input type="text" id="fname" name="fname" placeholder="Full Name"></td></tr>
+		<tr><td><label for="dob">Date of Birth</label></td></tr>
+		<tr><td><input type="date" id="dob" name="dob" placeholder="dd/mm/yyyy"></td></tr>
+		<tr><td><label for="add">Address</label></td></tr>
+		<tr><td><textarea id="add" name="add" placeholder="Address..." style="height:200px"></textarea></td></tr>
+		<tr><td><label for="pan">Permanent Account Number (PAN)</label></td></tr>
+		<tr><td><input type="text" id="pan" name="pan" placeholder="PAN"></td></tr>
+		<tr><td><label for="notd">Name of the Department</label></td></tr>
+		<tr><td><input type="text" id="notd" name="notd" placeholder="Name of the Department"></td></tr>
+		<tr><td><label for="pm">Payment Method</label></td></tr>
+		<tr><td><select id="pm" name="pm">
+		<option value="pm" SELECTED DISABLED>Permanent Method</option>
+		<option value="dd">Demand Draft</option>
+		<option value="cq">Cheque</option>
+		<option value="nb">Net Banking</option>
+    </select></td></tr>
+		<tr><td><center><input type="reset" value="Reset"></center></td></tr>
+		</table>
+		
+		
+		<table align="right" width="500px" style="margin:0px 100px 0px 0px">
+		<tr><td><label for="faname">Father's Name</label></td></tr>
+		<tr><td><input type="text" id="faname" name="faname" placeholder="Father's Name"></td></tr>
+		<tr><td><label for="nad">National Deductor</label></td></tr>
+		<tr><td><select id="nad" name="nad">
+		<option value="nad" SELECTED DISABLED>National Deductor</option>
+		<option value="in">Indian</option>
+		<option value="fo">Foreign</option>
+    </select></td></tr>
+		<tr><td><label for="gen">Gender</label></td></tr>
+		<tr><td><select id="gen" name="gen">
+		<option value="gen" SELECTED DISABLED>Gender</option>
+		<option value="ma">Male</option>
+		<option value="fe">Female</option>
+		<option value="oth">Others</option>
+    </select></td></tr>
+		<tr><td><label for="mob">Mobile No.</label></td></tr>
+		<tr><td><input type="text" id="mob" name="mob" placeholder="Mobile Number"></td></tr>
+		<tr><td><label for="email">Email Id</label></td></tr>
+		<tr><td><input type="text" id="email" name="email" placeholder="Email Id"></td></tr>
+		<tr><td><label for="noto">Name of the Office</label></td></tr>
+		<tr><td><input type="text" id="noto" name="noto" placeholder="Name of the Office"></td></tr>
+		<tr><td><label for="notm	">Name of the Ministry</label></td></tr>
+		<tr><td><input type="text" id="notm" name="notm" placeholder="Name of the Ministry"></td></tr>
+		<tr><td><label for="bank">Bank</label></td></tr>
+		<tr><td><select id="bank" name="bank">
+		<option value="bank" SELECTED DISABLED>Bank</option>
+		<option value="IDBI Bank">IDBI Bank
+		<option value="HDFC Bank">HDFC Bank
+		<option value="SBI Bank">SBI Bank
+		<option value="ICICI Bank">ICICI Bank
+		<option value="INDUSLAND Bank">INDUSLAND Bank
+		<option value="UNITED Bank">UNITED Bank
+    </select></td></tr>
+		<tr><td><center><input type="submit" value="Submit"></center></td></tr>
+		</table>
+		
+	</div>
+	<div class="row" align ="right">
+		<a class="button" href="Home Page.html"><span>HOME</span></a>
+	</div>
+	</form>
+</body>
+</html>

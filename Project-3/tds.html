@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	<!--
+		.button {
+    background-color: #E20902  ;border: none;color: white;padding: 15px 32px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;}
+		input[type=text], select, textarea {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=number]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=date]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=text], textarea, select:focus {border: 2px solid #555;}
+		input[type=submit] {width: 40%; background-color:#E20902   ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=submit]:hover { background-color: #F92821;}
+		input[type=password], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=password]:focus {border: 2px solid #555;}
+		input[type=reset] {width: 40%; background-color:#E20902   ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=reset]:hover { background-color: #F92821;}
+		input[type=button] {width: 40%; background-color:#E20902   ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=button]:hover { background-color: #F92821;}
+		/*CHECKBOX*/
+		.container { display: block; position: relative; padding-left: 35px; margin-bottom: 12px;
+    cursor: pointer; font-size: 22px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+		.container input {position: absolute;opacity: 0;cursor: pointer;}
+		.checkmark { position: absolute; top: 0; left: 0; height: 20px; width: 20px; background-color: #57575e;}
+		.container input:checked ~ .checkmark { background-color: #2196F3;}
+		.checkmark:after { content: ""; position: absolute; display: none;}
+		.container input:checked ~ .checkmark:after {display: block;}
+		.container .checkmark:after {left: 7px; top: 3px; width: 5px; height: 10px; border: solid white;
+	border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
+	-->
+	</style>
+</head>
+<body>
+	<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+		<div class="row" style="background-color:#E20902  ;font-family:Comic Sans MS; font-size:30px; color:white; padding:0">
+		<center><h1>TDS/TCS Tax Challan</h1></center>
+	</div>
+	<div class="row" style="margin:10px 0px 0px 0px">
+		
+		<table align="left" width="500px" style="margin:0px 0px 0px 100px">
+		<tr><td><label for="fname">Full Name</label></td></tr>
+		<tr><td><input type="text" id="fname" name="fname" placeholder="Full Name"></td></tr>
+		<tr><td><label for="add">Address</label></td></tr>
+		<tr><td><textarea id="add" name="add" placeholder="Address..." style="height:200px"></textarea></td></tr>
+		<tr><td><label for="pm">Payment Method</label></td></tr>
+		<tr><td><select id="pm" name="pm">
+		<option id="pm" value="pm" SELECTED DISABLED>Permanent Method</option>
+		<option id="dd" value="dd">Demand Draft</option>
+		<option id="cq" value="cq">Cheque</option>
+		<option id="nb" value="nb">Net Banking</option>
+    </select></td></tr>
+		<tr><td><label for="bank">Bank</label></td></tr>
+		<tr><td><select id="bank" name="bank" DISABLED>
+		<option value="bank" SELECTED DISABLED>Bank</option>
+		<option value="IDBI Bank">IDBI Bank
+		<option value="HDFC Bank">HDFC Bank
+		<option value="SBI Bank">SBI Bank
+		<option value="ICICI Bank">ICICI Bank
+		<option value="INDUSLAND Bank">INDUSLAND Bank
+		<option value="UNITED Bank">UNITED Bank
+    </select></td></tr>
+		<tr><td><label class="container">The applicant hereby declares that is stated above
+		<input type="checkbox"><span class="checkmark"></span></td></tr>
+		<tr><td><center><input type="reset" value="Reset"></center></td></tr>
+		</table>
+		
+		
+		<table align="right" width="500px" style="margin:0px 100px 0px 0px">
+		<tr><td><label for="pan">Permanent Account Number (PAN)</label></td></tr>
+		<tr><td><input type="text" id="pan" name="pan" placeholder="PAN"></td></tr>
+		<tr><td><label for="tan">Tax Declaration Account Number (TAN)</label></td></tr>
+		<tr><td><input type="text" id="tan" name="tan" placeholder="TAN"></td></tr>
+		<tr><td><label for="ay">Assessment Year</label></td></tr>
+		<tr><td><input type="text" id="ay" name="ay" placeholder="Assessment Year" maxlength="4"></td></tr>
+		<tr><td><label for="fy">Final Year</label></td></tr>
+		<tr><td><input type="text" id="fy" name="fy" placeholder="Final Year" maxlength="4"></td></tr>
+		<tr><td><label for="btn">Confirm Method</label></td></tr>
+		<tr><td><input type="button" id="btn" name="btn" value="Confirm" OnClick="myFunction()"></td></tr>
+		<tr><td><label for="cdd">Cheque/DD Number</label></td></tr>
+		<tr><td><input type="text" id="cdd" name="cdd" placeholder="Cheque/DD Number" DISABLED></td></tr>
+		<tr><td><br></td></tr>
+		<tr><td> </td></tr>
+		<tr><td><center><input type="submit" value="Submit"></center></td></tr>
+		</table>
+		
+	</div>
+	<div class="row" align ="right">
+		<a class="button" href="Home Page.html"><span>HOME</span></a>
+	</div>
+	</form>
+	<script>
+	function myFunction(){
+		if(document.getElementById("pm")=="dd")
+			document.getElementById("cdd").disabled = false;
+		else if(document.getElementById("pm")=="cq")
+			document.getElementById("cdd").disabled = false;
+		else if(document.getElementById("pm")=="nb")
+			document.getElementById("bank").disabled = false;
+	}
+	</script>
+	<?php
+		$conn=new PDO("mysli};Dbq=".$test."Uid=root;Pwd=password;");
+		try{
+				$sql="insert into tds1(pan,addr,tan)
+					values(:tpan,:taddr,:ttan);";
+				$query=$conn->prepare($sql);
+				$inst=$query->execute(array(
+				":tpan"=>$_POST["pan"],
+				":taddr"=>$_POST["add"],
+				":ttan"=>$_POST["tan"],));
+				echo "Record Inserted";
+		}catch(PDOException $e){echo $e->getMessage();}
+		}
+	?>
+</body>
+</html>
