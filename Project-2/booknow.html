@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Book Now</title>
+	<style type="text/css">
+	<!--
+		.button {
+    background-color: #099CB9;border: none;color: white;padding: 15px 32px;text-align: center;
+	text-decoration: none;display: inline-block;font-size: 16px;}
+		input[type=text], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=number]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=date]{width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=text]:focus {border: 2px solid #555;}
+		input[type=submit] {width: 40%; background-color:#099CB9 ; color: white; padding: 14px 20px;
+    margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;}
+		input[type=submit]:hover { background-color: #4343C1;}
+		input[type=password], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+		input[type=password]:focus {border: 2px solid #555;}
+	-->
+	</style>
+</head>
+<body style="background-color:#F2EFEE">
+	<div class="row" style="background-color:#099CB9;font-family:Comic Sans MS; font-size:30px; color:white;">
+		<center>Book Now</center>
+	</div>
+	<form action="thankyou.html" style="font-family:Comic Sans MS">
+	<div class="row" style="margin:10px 0px 0px 0px">
+		<div class="column" style="margin:0px 0px 0px 0px">
+					<img src="bn2.jpg" alt="Text Image" height="600" width="390" align="right">
+		</div>
+		<div class="column" style="margin:0px 0px 0px 0px">
+					<img src="bn1.jpg" alt="Text Image" height="600" width="390" align="LEFT">
+		</div>
+		<div class="column" style="margin:0px 400px 0px 400px">
+		<label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fname" placeholder="Full Name">
+		<label for="email">Email Id</label>
+    <input type="text" id="email" name="email" placeholder="Email Id">
+		<label for="cin">Travel Start Date(approx)</label>
+    <input type="date" id="cin" name="cin" placeholder="dd/mm/yyyy">
+		<label for="pcg">Package</label>
+    <select id="pcg" name="pcg">
+		<option value="pcg" SELECTED DISABLED>Package</option>
+		<option value="ME">Middle-East</option>
+		<option value="EU">Europe</option>
+		<option value="AF">Africa</option>
+		<option value="AU">Australia</option>
+		<option value="AM">America</option>
+		<option value="SA">South-East Asia</option>
+    </select>
+		<label for="nofheads">Number of Heads</label>
+    <input type="number" id="nofheads" name="nofheads" placeholder="Number of Heads (age>2)">
+		<label for="itypes">Identification Types</label>
+	<select id="itypes" name="itypes">
+		<option value="Identification Types" SELECTED DISABLED>Identification Types</option>
+		<option value="adh">Adhaar Card</option>
+		<option value="pan">PAN Card</option>
+		<option value="dl">Driving Lisence</option>
+		<option value="pass">Passport</option>
+		<option value="vot">Voter ID Card</option>
+    </select>
+		<label for="in">Identification Number</label>
+    <input type="text" id="in" name="in" placeholder="Identification Number">
+		<label for="mob">Mobile No.</label>
+    <input type="text" id="mob" name="mob" placeholder="Mobile Number">
+		<center><input type="submit" value="Submit"></center>
+	</div>
+	</form>
+	</div>
+	<div class="row" align ="right">
+		<a class="button" href="Home Page.html"><span>HOME</span></a>
+	</div>
+</body>
+</html>
